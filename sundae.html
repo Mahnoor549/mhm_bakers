@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sundaes — MHM Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">MHM <span>Bakery</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cakes.html">Cakes</a></li>
+      <li><a href="pastry.html">Pastries</a></li>
+      <li><a href="sundae.html" class="active">Sundaes</a></li>
+      <li><a href="special.html">Specials</a></li>
+    </ul>
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart <span class="cart-count" style="display:none">0</span>
+    </button>
+  </nav>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>🛒 Your Cart</h2>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty"><span>🛒</span><p>Your cart is empty</p></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total-amount">PKR 0</span>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <div class="page-header">
+    <h1>🍨 Delicious Sundaes</h1>
+    <p>Creamy, dreamy & piled high with your favourite toppings</p>
+  </div>
+
+  <div class="section">
+    <div class="grid">
+      <div class="product-card">
+        <img src="https://t4.ftcdn.net/jpg/05/76/37/13/360_F_576371334_ziOJTULP7l0BVpuA3t4b5ULCMo8vgfZq.jpg" alt="White Fluffy Cream">
+        <div class="product-info">
+          <h3>White Fluffy Cream</h3>
+          <p class="price">PKR 2,415</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.thereciperebel.com/wp-content/uploads/2022/05/brownie-sundae-TRR-1200-25-of-40.jpg" alt="Chocolate Fudge">
+        <div class="product-info">
+          <h3>Chocolate Fudge</h3>
+          <p class="price">PKR 2,784</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2022-06-ice-cream-sundae%2F2022_July_K_EDR_Ice-Cream-Sundae_389" alt="Caramel Crunch">
+        <div class="product-info">
+          <h3>Caramel Crunch</h3>
+          <p class="price">PKR 2,182</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.ctfassets.net/lufu0clouua1/2o81XxYcD1yGno6gCP5ktt/2c99d0e783b6ed13b8e37395e818dcf4/ice-cream-sundae.jpg" alt="Brownie Wafer">
+        <div class="product-info">
+          <h3>Brownie Wafer</h3>
+          <p class="price">PKR 2,182</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.thereciperebel.com/wp-content/uploads/2022/05/brownie-sundae-TRR-1200-25-of-40.jpg" alt="Wafer Caramel Crunch">
+        <div class="product-info">
+          <h3>Wafer Caramel Crunch</h3>
+          <p class="price">PKR 2,182</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 <span>MHM Bakery</span> — Made with 🩷 in Pakistan</p>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

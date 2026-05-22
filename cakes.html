@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cakes — MHM Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">MHM <span>Bakery</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cakes.html" class="active">Cakes</a></li>
+      <li><a href="pastry.html">Pastries</a></li>
+      <li><a href="sundae.html">Sundaes</a></li>
+      <li><a href="special.html">Specials</a></li>
+    </ul>
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart <span class="cart-count" style="display:none">0</span>
+    </button>
+  </nav>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>🛒 Your Cart</h2>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty"><span>🛒</span><p>Your cart is empty</p></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total-amount">PKR 0</span>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <div class="page-header">
+    <h1>🎂 Our Cakes</h1>
+    <p>Layered, frosted & baked with love — every slice tells a story</p>
+  </div>
+
+  <div class="section">
+    <div class="grid">
+
+      <div class="product-card">
+        <img src="https://www.lalschocolates.com/cdn/shop/products/triple-layer.jpg?v=1686309534" alt="Triple Layer Chocolate Cake">
+        <div class="product-info">
+          <h3>Triple Layer Chocolate Cake</h3>
+          <p class="price">PKR 1,650</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://pastrychefonline.com/wp-content/uploads/2020/10/emine-icing-covered-red-velvet-cake.jpg" alt="Red Velvet Cake">
+        <div class="product-info">
+          <h3>Red Velvet Cake</h3>
+          <p class="price">PKR 1,800</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.notquitenigella.com/images/dream-cake-tin-can-chocolate-filipino/__dream-cake-tin-can-chocolate-filipino-12.jpg" alt="Chocolate Dream Cake">
+        <div class="product-info">
+          <h3>Chocolate Dream Cake</h3>
+          <p class="price">PKR 4,500</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://bakewithzoha.com/wp-content/uploads/2024/07/mango-cream-chiffon-cake-featured.jpg" alt="Mango Cake">
+        <div class="product-info">
+          <h3>Mango Cream Chiffon Cake</h3>
+          <p class="price">PKR 7,500</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+  <div class="product-card">
+        <img src="https://www.vibrantplate.com/wp-content/uploads/2016/09/Blueberry-Cake-05.jpg" alt="Blueberry">
+        <div class="product-info">
+          <h3>Blueberry Cake</h3>
+          <p class="price">PKR 3,000</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://www.lifeloveandsugar.com/wp-content/uploads/2024/06/Butterscotch-Cake2E.jpg" alt="Butterscotch-Cake">
+        <div class="product-info">
+          <h3>Butterscotch Cake <small style="font-size:12px; color:#9a6070;">(4 in 1)</small></h3>
+          <p class="price">PKR 3,500</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoDhyCEn6bqBz9kaVPIbgnJSwR16ZFiV6dhw&s" alt="Vanilla Sponge Cake">
+        <div class="product-info">
+          <h3>Vanilla Sponge Cake</h3>
+          <p class="price">PKR 1,400</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://thewoodandspoon.com/wp-content/uploads/2025/05/IMG_5442.jpg" alt="Coconut Cream Cake">
+        <div class="product-info">
+          <h3>Coconut Cream Cake</h3>
+          <p class="price">PKR 2,200</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 <span>MHM Bakery</span> — Made with 🩷 in Pakistan</p>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

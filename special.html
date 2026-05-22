@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MHM Specials — MHM Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">MHM <span>Bakery</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cakes.html">Cakes</a></li>
+      <li><a href="pastry.html">Pastries</a></li>
+      <li><a href="sundae.html">Sundaes</a></li>
+      <li><a href="special.html" class="active">Specials</a></li>
+    </ul>
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart <span class="cart-count" style="display:none">0</span>
+    </button>
+  </nav>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>🛒 Your Cart</h2>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty"><span>🛒</span><p>Your cart is empty</p></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total-amount">PKR 0</span>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <div class="page-header">
+    <h1>⭐ MHM Specials</h1>
+    <p>Our signature creations — exclusive & unforgettable</p>
+  </div>
+
+  <div class="section">
+    <div class="grid">
+      <div class="special-card">
+        <img src="https://images.notquitenigella.com/images/dream-cake-tin-can-chocolate-filipino/__dream-cake-tin-can-chocolate-filipino-12.jpg" alt="Chocolate Dream Cake">
+        <div class="special-info">
+          <div class="badge">⭐ Signature</div>
+          <h3>Chocolate Dream Cake</h3>
+          <p class="price">PKR 4,500</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="special-card">
+        <img src="https://inbloombakery.com/wp-content/uploads/2021/11/new-apple-pie-13-of-19.jpg" alt="Lattice Crust Apple Pie">
+        <div class="special-info">
+          <div class="badge">🥧 Classic</div>
+          <h3>Lattice Crust Apple Pie</h3>
+          <p class="price">PKR 3,000</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="special-card">
+        <img src="https://multitenant.vmos-static.com/cdn-cgi/image/fit=cover,width=960/https://media-multitenant.vmos-static.com/media/v1/media?entityUUID=bb699c02-fb11-4391-b4d5-8953de3fbaea&scope=grid" alt="San Sebastian Cheesecake">
+        <div class="special-info">
+          <div class="badge">🧀 Premium</div>
+          <h3>San Sebastián Cheesecake</h3>
+          <p class="price">PKR 7,500</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="special-card">
+        <img src="https://multitenant.vmos-static.com/cdn-cgi/image/fit=cover,width=960/https://media-multitenant.vmos-static.com/media/v1/media?entityUUID=1b0fc7a5-ff66-4a78-9bd0-9f7a6f601d8d&scope=grid" alt="Lotus Biscoff Croffle">
+        <div class="special-info">
+          <div class="badge">🔥 Trending</div>
+          <h3>Lotus Biscoff Croffle</h3>
+          <p class="price">PKR 6,500</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="special-card">
+        <img src="https://bonnibakery.com/wp-content/uploads/2022/02/Valentines-Cakesicles-16.jpg.webp" alt="Red Velvet Cakesicles">
+        <div class="special-info">
+          <div class="badge">🩷 Fan Favourite</div>
+          <h3>Red Velvet Cakesicles <small style="font-size:13px; color:#9a6070;">(4 in 1)</small></h3>
+          <p class="price">PKR 3,500</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 <span>MHM Bakery</span> — Made with 🩷 in Pakistan</p>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

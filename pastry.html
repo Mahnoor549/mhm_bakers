@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastries — MHM Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">MHM <span>Bakery</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cakes.html">Cakes</a></li>
+      <li><a href="pastry.html" class="active">Pastries</a></li>
+      <li><a href="sundae.html">Sundaes</a></li>
+      <li><a href="special.html">Specials</a></li>
+    </ul>
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart <span class="cart-count" style="display:none">0</span>
+    </button>
+  </nav>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>🛒 Your Cart</h2>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty"><span>🛒</span><p>Your cart is empty</p></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total-amount">PKR 0</span>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <div class="page-header">
+    <h1>🥐 Delicious Pastries</h1>
+    <p>Flaky, buttery & baked to golden perfection</p>
+  </div>
+
+  <div class="section">
+    <div class="grid">
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoDhyCEn6bqBz9kaVPIbgnJSwR16ZFiV6dhw&s" alt="Red Velvet Pastry">
+        <div class="product-info">
+          <h3>Red Velvet Pastry</h3>
+          <p class="price">PKR 2,415</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoDhyCEn6bqBz9kaVPIbgnJSwR16ZFiV6dhw&s" alt="Pineapple Vanilla Pastry">
+        <div class="product-info">
+          <h3>Pineapple Vanilla</h3>
+          <p class="price">PKR 2,784</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTagCZLSLFWEEDTX6HHPjii00nOfC1e6V5EhQ&s" alt="Coconut Milka">
+        <div class="product-info">
+          <h3>Coconut Milka</h3>
+          <p class="price">PKR 2,182</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqj1Pqd1lS6Y8Z-B_t0MWOHJ14cfLPc_SIsg&s" alt="White Forster">
+        <div class="product-info">
+          <h3>White Forster</h3>
+          <p class="price">PKR 2,182</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTjhCRb43MtwGrJ8q6WRLW1fMGU4Fb0T0R2w&s" alt="Black Forster">
+        <div class="product-info">
+          <h3>Black Forster</h3>
+          <p class="price">PKR 2,182</p>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 <span>MHM Bakery</span> — Made with 🩷 in Pakistan</p>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

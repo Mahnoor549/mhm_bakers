@@ -522,3 +522,67 @@ footer {
 }
 
 footer span { color: var(--rose-light); font-family: 'Playfair Display', serif; }
+
+
+/* ============================================================
+   RESPONSIVE (tablet & mobile)
+   ============================================================ */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .section { padding: 48px 20px; }
+  .page-header { padding: 40px 20px; }
+  .page-header h1 { font-size: 34px; }
+  .banner { padding: 48px 20px; }
+}
+
+@media (max-width: 700px) {
+  /* Nav: logo + cart on the first row, links scroll on the second row */
+  nav {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    row-gap: 8px;
+  }
+  .logo { font-size: 22px; }
+  nav ul {
+    order: 3;
+    width: 100%;
+    gap: 4px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  nav ul a { font-size: 13px; padding: 7px 12px; white-space: nowrap; }
+  .cart-btn { padding: 7px 14px; font-size: 13px; }
+
+  .hero { padding: 60px 16px 56px; }
+  .hero p { font-size: 15px; margin-bottom: 28px; }
+  .btn-primary, .btn-outline { padding: 12px 24px; font-size: 14px; }
+
+  .section { padding: 40px 16px; }
+  .section-title { font-size: 26px; }
+  .section-sub { margin-bottom: 24px; }
+  .page-header h1 { font-size: 28px; }
+  .banner h2 { font-size: 24px; }
+
+  /* Two cards per row on phones */
+  .featured-grid, .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .product-card img { height: 140px; }
+  .special-card img { height: 160px; }
+  .product-info, .special-info { padding: 12px; }
+  .product-info h3 { font-size: 15px; }
+  .special-info h3 { font-size: 17px; }
+
+  /* Cart takes the full width on phones */
+  .cart-sidebar { width: 100%; right: -100%; }
+
+  .toast { white-space: normal; width: 90%; text-align: center; }
+}
+
+@media (max-width: 380px) {
+  .featured-grid, .grid { grid-template-columns: 1fr; }
+}

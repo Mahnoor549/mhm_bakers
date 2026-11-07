@@ -119,7 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const price = parseInt(priceText.replace(/[^0-9]/g, ''), 10);
       cart.add(name, price);
 
-      // Brief "Added!" feedback
       const original = this.textContent;
       this.textContent = '✓ Added!';
       this.classList.add('added');
@@ -130,6 +129,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Close sidebar on overlay click
+
   document.getElementById('cart-overlay')?.addEventListener('click', closeCart);
+});
+
+
+const PLACEHOLDER_IMG = 'data:image/svg+xml,' + encodeURIComponent(
+  "<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'>" +
+  "<rect width='100%' height='100%' fill='#f5dde3'/>" +
+  "<text x='50%' y='52%' font-size='80' text-anchor='middle' dominant-baseline='middle'>🍰</text>" +
+  "</svg>"
+);
+
+document.addEventListener('error', function (e) {
+  const img = e.target;
+  if (img.tagName === 'IMG' && !img.dataset.fallback) {
+    img.dataset.fallback = '1';
+    img.src = PLACEHOLDER_IMG;
+  }
+}, true);
+
+// Checkout (demo): confirms the order and empties the cart.
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.checkout-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (cart.items.length === 0) {
+        showToast('Your cart is empty. Add something tasty first! 🍰');
+        return;
+      }
+      const total = cart.total().toLocaleString();
+      cart.items = [];
+      cart.save();
+      cart.render();
+      cart.updateCount();
+      closeCart();
+      showToast(`🎉 Order placed! Total: PKR ${total} (demo)`);
+    });
+  });
 });
